@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import css from "./App.module.css";
+import s from "./App.module.css";
 import Navigation from "../Navigation/Navigation";
 import { Suspense, lazy } from "react";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
@@ -15,7 +15,7 @@ const MovieReviews = lazy(() => import("../MovieReviews/MovieReviews"));
 
 function App() {
   return (
-    <div className={css.box}>
+    <div className={s.box}>
       <Navigation />
       <ScrollToTopButton />
       <Suspense fallback={null}>
