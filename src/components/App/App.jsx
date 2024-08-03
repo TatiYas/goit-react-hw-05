@@ -4,12 +4,12 @@ import Navigation from "../Navigation/Navigation";
 import { Suspense, lazy } from "react";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 
-const HomePage = lazy(() => import("../../Pages/HomePage/HomePage"));
-const MoviesPage = lazy(() => import("../../Pages/MoviesPage/MoviesPage"));
+const HomePage = lazy(() => import("../Pages/HomePage/HomePage"));
+const MoviesPage = lazy(() => import("../Pages/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() =>
-  import("../../Pages/MovieDetailsPage/MovieDetailsPage")
+  import("../Pages/MovieDetailsPage/MovieDetailsPage")
 );
-const NotFoundPage = lazy(() => import("../../Pages/NotFoundPage"));
+const NotFoundPage = lazy(() => import("../Pages/NotFoundPage"));
 const MovieCast = lazy(() => import("../MovieCast/MovieCast"));
 const MovieReviews = lazy(() => import("../MovieReviews/MovieReviews"));
 
