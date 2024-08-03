@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getTrendingMovies } from "../HomePage/HomePage";
-import Loader from "../../Loader/Loader";
+import { getTrendingMovies } from "../../../movies-api";
+import Loader from "../../Loader/Loader"
 import MovieList from "../../MovieList/MovieList";
 import NotFoundPage from "../NotFoundPage";
 import s from "./HomePage.module.css";

@@ -1,5 +1,8 @@
-.header {
-    margin-left: 30px;
-    margin-bottom: 30px;
-    color: rgb(75, 207, 163);
-  }
+.container {
+  margin: 16px;
+}
+
+.tytle {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}

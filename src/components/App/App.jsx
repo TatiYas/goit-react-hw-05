@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import s from "./App.module.css";
 import Navigation from "../Navigation/Navigation";
 import { Suspense, lazy } from "react";
-import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
+
 
 const HomePage = lazy(() => import("../Pages/HomePage/HomePage"));
 const MoviesPage = lazy(() => import("../Pages/MoviesPage/MoviesPage"));
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className={s.box}>
       <Navigation />
-      <ScrollToTopButton />
+    
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage />} />
