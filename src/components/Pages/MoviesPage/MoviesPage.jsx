@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { searchMovies } from "../../movies-api";
-import MovieList from "../../components/MovieList/MovieList";
-import Loader from "../../components/Loader/Loader";
-import SearchForm from "../../components/SearchForm/SearchForm";
+import { searchMovies } from "../../../movies-api";
+import MovieList from "../../MovieList/MovieList";
+import Loader from "../../components/Loader/Loader"
 import NotFoundPage from "../NotFoundPage";
 import s from "./MoviesPage.module.css";
 
@@ -34,7 +33,7 @@ function MoviesPage() {
 
   return (
     <div className={s.box}>
-      <SearchForm />
+      
       {isLoading && <Loader />}
       {error && <NotFoundPage />}
       <MovieList movies={movies} />

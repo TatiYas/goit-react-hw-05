@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieCredits } from "../../movies-api";
 import Loader from "../Loader/Loader";
-import NotFoundPage from "../../Pages/NotFoundPage";
+import NotFoundPage from "../Pages/NotFoundPage";
 import s from "./MovieCast.module.css";
 
 const defaultImg =
