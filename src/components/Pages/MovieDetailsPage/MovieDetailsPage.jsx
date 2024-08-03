@@ -9,7 +9,7 @@ import {
 import { getMovieDetails } from "../../../movies-api";
 import Loader from "../../Loader/Loader";
 import NotFoundPage from "../NotFoundPage";
-import s from "./MovieDetailsPage.module.css";
+import s from "../MovieDetailsPage/MovieDetailsPage.module.css";
 import clsx from "clsx";
 
 const defaultImg =
