@@ -5,7 +5,8 @@ import Loader from "../Loader/Loader";
 import NotFoundPage from "../../pages/NotFoundPage";
 import s from "./MovieCast.module.css";
 
-
+const defaultImg =
+  "https://i.pinimg.com/originals/57/67/7a/57677a3925b3e43538a3f13a70d0307d.jpg";
 
 export default function MovieCast() {
   const { movieId } = useParams();
@@ -40,7 +41,7 @@ export default function MovieCast() {
               className={s.img}
               src={
                 actor.profile_path
-                  ? `https://image.tmdb.org/t/p/w500${actor.profile_path}`
+                  ? `https://image.tmdb.org/t/p/w450${actor.profile_path}`
                   : defaultImg
               }
               width={300}
