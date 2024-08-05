@@ -18,7 +18,7 @@ const MovieDetailsPage = () => {
           {
             headers: {
               Authorization:
-                "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZWNhN2I5NjNjMzA4ODBjZjNkOWJiMTI1N2IxZTIwYiIsIm5iZiI6MTcyMjg1Njg5NS42NzU4MTksInN1YiI6IjY2YWU0MmVkZWVlNjQwYjA1NWEzNDdlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IJFSoZOWBrwm-N7uxXYtqnlgn5UKe9pTI7263eupzYk",
+                "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZWNhN2I5NjNjMzA4ODBjZjNkOWJiMTI1N2IxZTIwYiIsIm5iZiI6MTcyMjg1Njg5NS42NzU4MTksInN1YiI6IjY2YWU0MmVkZWVlNjQwYjA1NWEzNDdlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IJFSoZOWBrwm-N7uxXYtqnlgn5UKe9pTI7263eupzYk",
             },
           }
         );

@@ -1,24 +1,19 @@
-.mainDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .item {
-    list-style: none;
-  }
-  .name {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .description {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 0.04em;
-  }
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.review h3 {
+  margin: 0;
+}
+
+.review p {
+  margin: 10px 0 0;
+}
