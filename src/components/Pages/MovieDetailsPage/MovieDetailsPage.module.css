@@ -1,76 +1,36 @@
 
-.img {
-  width: 200px;
+.container {
+  padding: 20px;
 }
 
-.wrnapper {
-  margin-top: 30px;
+.buttonBack {
+  display: block;
+  margin-bottom: 20px;
+  color: rgb(135 167 119);
+  text-decoration: none;
+}
+
+.movieDetails {
   display: flex;
-  gap: 30px;
+}
+
+.poster {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.info {
+  max-width: 500px;
+}
+
+.additionalInfo {
+  margin-top: 20px;
 }
 
 .link {
-  color: #096317;
-  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+  color: #064127;
+  text-decoration: none;
 }
-
-.links {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-
-
-/*.main {
-    margin: 0 30px 30px 30px;
-  }
-  .poster {
-    margin-top: 20px;
-  }
-  .box {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-  .boxAbout {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  .title {
-    font-size: 30px;
-  }
-  .span {
-    font-size: 22px;
-    font-weight: 600;
-  }
-  .description {
-    font-size: 20px;
-  }
-  .list {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .linka {
-    list-style: none;
-  }
-  .link {
-    color: black;
-    font-size: 18px;
-    font-weight: 700;
-  }
-  .link:hover {
-    text-decoration: underline;
-  }
-  .isActive {
-    color: rgb(29 189 135);
-  }
-  .name {
-    margin-left: auto;
-    font-size: 36px;
-    color: rgb(29 189 135);
-    text-shadow: -12px 5px 16px rgb(135 167 119);
-  }
