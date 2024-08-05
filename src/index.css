@@ -10,16 +10,16 @@
 }
 
 a {
-  font-weight: 500;
-  color: #4e4f57;
+  font-weight: 400;
+  color: #f4f812;
   text-decoration: inherit;
 }
 a:hover {
-  color: rgb(29 189 135);
+  color: rgb(173, 189, 29);
 }
 
 body {
-  background-color: rgb(225, 231, 219);
+  background-color: rgb(106, 147, 68);
   margin: 0;
   place-items: center;
   min-width: 320px;

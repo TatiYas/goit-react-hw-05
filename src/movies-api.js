@@ -1,59 +1,59 @@
-import axios from 'axios';
-axios.defaults.baseURL = 'https://api.themoviedb.org/3';
+import axios from "axios";
 
-const options = {
-    headers: {
-        Authorization:
-            'https://api.themoviedb.org/3/movie/550?api_key=1eca7b963c30880cf3d9bb1257b1e20b',
-    },
+const ACCESS_TOKEN =
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZWNhN2I5NjNjMzA4ODBjZjNkOWJiMTI1N2IxZTIwYiIsIm5iZiI6MTcyMjg1NjUxMi41MDI2MTUsInN1YiI6IjY2YWU0MmVkZWVlNjQwYjA1NWEzNDdlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aZmJCXlBjPwGCLUxQTPSqHfUgJiR1ssREwdAd7h7aOo";
+const BASIC_URL = "https://api.themoviedb.org/3";
+const END_POINT_TRENDS = "/trending/movie/day";
+const END_POINT_SEARCH = "/search/movie";
+const END_POINT_ID = "/movie/";
+const END_POINT_REVIEWS = "/reviews";
+
+export const options = {
+  headers: {
+    Authorization: `Bearer ${ACCESS_TOKEN}`,
+  },
+  params: {
+    query: "",
+    include_adult: false,
+    language: "en-US",
+    page: 1,
+  },
 };
 
-export const getTrendingMovies = async () => {
-    const url = '/trending/movie/day';
+export const getMovieDetails = async (id) => {
+  const url = `${BASIC_URL}${END_POINT_ID}${id}`;
 
-    const response = await axios.get(url, options);
-    return response.data.results;
-};
-export const getMovieDetails = async (movieId) => {
-    const url = `/movie/${movieId}`;
-
-    const response = await axios.get(url, options);
-    return response.data;
-};
-export const searchMovies = async (searchQuery) => {
-    const url = `/search/movie?query=${searchQuery}&include_adult=false&language=en-US&page=1`;
-
-    const response = await axios.get(url, options);
-    return response.data;
+  const { data } = await axios.get(url, options);
+  return data;
 };
 
-export const getMovieCredits = async (movieId) => {
-    const url = `/movie/${movieId}/credits`;
+export const fetchTrendingMovies = async () => {
+  const url = `${BASIC_URL}${END_POINT_TRENDS}`;
 
-    const response = await axios.get(url, options);
-    return response.data;
+  const { data } = await axios.get(url, options);
+  return data.results;
 };
 
-export const getMovieReviews = async (movieId) => {
-    const url = `/movie/${movieId}/reviews`;
+export const fetchSearchMovies = async (searchQuery) => {
+  const url = `${BASIC_URL}${END_POINT_SEARCH}`;
 
-    const response = await axios.get(url, options);
-    return response.data;
+  const { data } = await axios.get(url, {
+    ...options,
+    params: { query: searchQuery },
+  });
+  return data.results;
 };
 
+export const fetchMoviesById = async (id) => {
+  const url = `${BASIC_URL}${END_POINT_ID}${id}`;
 
+  const { data } = await axios.get(url, options);
+  return data;
+};
 
+export const fetchReviewsById = async (id) => {
+  const url = `${BASIC_URL}${END_POINT_ID}${id}${END_POINT_REVIEWS}`;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  const { data } = await axios.get(url, options);
+  return data;
+};

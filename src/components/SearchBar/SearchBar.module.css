@@ -1,0 +1,20 @@
+.input {
+    width: 350px;
+    height: 35px;
+  }
+  
+  .button {
+    border: none;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    color: rgb(224, 247, 76);
+    background-color: #38e85c;
+    cursor: pointer;
+  }
+  .searchf {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin-top: 20px;}

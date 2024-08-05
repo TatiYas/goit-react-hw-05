@@ -1,44 +1,40 @@
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { searchMovies } from "../../../movies-api";
+
+import SearchBar from "../../SearchBar/SearchBar";
 import MovieList from "../../MovieList/MovieList";
-import Loader from "../../Loader/Loader"
-import NotFoundPage from "../NotFoundPage";
-import s from "./MoviesPage.module.css";
+import { useEffect, useState } from "react";
+import { fetchSearchMovies } from "../../../movies-api";
+import { useSearchParams } from "react-router-dom";
 
-function MoviesPage() {
+
+
+const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const [searchParams] = useSearchParams();
-  const query = searchParams.get("query") ?? "";
+  const filterValue = searchParams.get("query") ?? "";
+
+  const onSubmit = (newValue) => {
+    setSearchParams({ query: newValue });
+  };
 
   useEffect(() => {
-    if (query) {
-      const getMovies = async () => {
-        try {
-          setIsLoading(true);
-          const data = await searchMovies(query);
-          setMovies(data.results);
-        } catch (error) {
-          setError(true);
-        } finally {
-          setIsLoading(false);
-        }
-      };
-      getMovies();
-    }
-  }, [query]);
-
+    const getData = async () => {
+      try {
+        const data = await fetchSearchMovies(filterValue);
+        setMovies(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+  }, [filterValue]);
   return (
-    <div className={s.box}>
-      
-      {isLoading && <Loader />}
-      {error && <NotFoundPage />}
+    <div>
+      <SearchBar filterValue={filterValue} onSubmit={onSubmit} />
+
       <MovieList movies={movies} />
     </div>
   );
-}
+};
 
 export default MoviesPage;
