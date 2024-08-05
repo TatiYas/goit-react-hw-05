@@ -1,5 +1,5 @@
 import SearchBar from "../../SearchBar/SearchBar";
-import MovieList from "../../MovieList/MovieList";
+import MovieList from "../../MovieList/MoviesList";
 import { useEffect, useState } from "react";
 import { fetchSearchMovies } from "../../../movies-api";
 import { useSearchParams } from "react-router-dom";

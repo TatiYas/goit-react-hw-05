@@ -1,8 +1,11 @@
 .container {
-  margin: 16px;
+  margin-left: 20px;
 }
 
-.tytle {
+.title {
   margin-top: 16px;
   margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
