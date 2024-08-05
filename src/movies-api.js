@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ACCESS_TOKEN =
-  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZWNhN2I5NjNjMzA4ODBjZjNkOWJiMTI1N2IxZTIwYiIsIm5iZiI6MTcyMjg1NjUxMi41MDI2MTUsInN1YiI6IjY2YWU0MmVkZWVlNjQwYjA1NWEzNDdlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aZmJCXlBjPwGCLUxQTPSqHfUgJiR1ssREwdAd7h7aOo";
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZWNhN2I5NjNjMzA4ODBjZjNkOWJiMTI1N2IxZTIwYiIsIm5iZiI6MTcyMjg1Njg5NS42NzU4MTksInN1YiI6IjY2YWU0MmVkZWVlNjQwYjA1NWEzNDdlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IJFSoZOWBrwm-N7uxXYtqnlgn5UKe9pTI7263eupzYk";
 const BASIC_URL = "https://api.themoviedb.org/3";
 const END_POINT_TRENDS = "/trending/movie/day";
 const END_POINT_SEARCH = "/search/movie";
@@ -34,7 +34,7 @@ export const fetchTrendingMovies = async () => {
   return data.results;
 };
 
-export const fetchSearchMovies = async (searchQuery) => {
+export const fetchMoviesSearch = async (searchQuery) => {
   const url = `${BASIC_URL}${END_POINT_SEARCH}`;
 
   const { data } = await axios.get(url, {
