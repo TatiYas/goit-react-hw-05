@@ -1,0 +1,35 @@
+.container {
+  padding: 20px;
+}
+
+.buttonBack {
+  display: block;
+  margin-bottom: 20px;
+  color: rgb(135 167 119);
+  text-decoration: none;
+}
+
+.movieDetails {
+  display: flex;
+}
+
+.poster {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.info {
+  max-width: 500px;
+}
+
+.additionalInfo {
+  margin-top: 20px;
+}
+
+.link {
+  display: block;
+  margin-bottom: 10px;
+  color: #064127;
+  text-decoration: none;
+}
